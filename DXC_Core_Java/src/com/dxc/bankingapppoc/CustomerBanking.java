@@ -3,6 +3,8 @@ package com.dxc.bankingapppoc;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+
+// This is My Customer Banking Class
 class MyBankClass <T> { // T -> ICICI / HDFC / AXIS
 	T obj;
 	
