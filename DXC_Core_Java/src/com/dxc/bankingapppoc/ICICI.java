@@ -11,7 +11,7 @@ public class ICICI implements RBI{
 	public int BAL = MIN_BAL;
 	
 	@Override
-	public void openAccount(BufferedReader buff) {
+	public void openAccount(BufferedReader buff, Customer customer) {
 		try {
 			System.out.println("Enter your Name");
 			String name = buff.readLine();
@@ -19,6 +19,10 @@ public class ICICI implements RBI{
 			String email = buff.readLine();
 			System.out.println("Enter your Phone");
 			String phone = buff.readLine();
+			
+			customer.setName(name);
+			customer.setEmail(email);
+			customer.setPhone(phone);
 			
 			System.out.println("Congratulations your Account is Opened !!");
 			System.out.println("your Details are \nName: "+name+"\nEmail: "+email+"\nPhone: "+phone);
@@ -29,11 +33,12 @@ public class ICICI implements RBI{
 	}
 
 	@Override
-	public void deposit(BufferedReader buff) {
+	public void deposit(BufferedReader buff, Customer customer) {
 		try {
 			System.out.println("Enter the amount to be deposited");
 			String amount = buff.readLine();
 			BAL = BAL + Integer.parseInt(amount);
+			customer.setBalance(String.valueOf(BAL));
 			System.out.println("Balance is "+BAL);
 		}
 		catch(Exception e) {
@@ -42,7 +47,7 @@ public class ICICI implements RBI{
 	}
 
 	@Override
-	public void withdrawl(BufferedReader buff) {
+	public void withdrawl(BufferedReader buff, Customer customer) {
 		try {
 			System.out.println("Enter the amount to be Withdrawl");
 			String amount = buff.readLine();
@@ -50,6 +55,7 @@ public class ICICI implements RBI{
 				BAL = BAL - Integer.parseInt(amount);
 			else
 				System.out.println("MIN BAL is not maintained after withdrawl !!");
+			customer.setBalance(String.valueOf(BAL));
 			System.out.println("Balance is "+BAL);
 		}
 		catch(Exception e) {
@@ -58,7 +64,7 @@ public class ICICI implements RBI{
 	}
 
 	@Override
-	public void openFD(BufferedReader buff) {
+	public void openFD(BufferedReader buff, Customer customer) {
 		try {
 			System.out.println("Enter your FD amount");
 			String fdamount = buff.readLine();

@@ -57,13 +57,13 @@ public class CustomerBanking {
 						System.out.println("SELECT  YOUR  Operation\n1. Open Account\n2. Deposit\n3. WithDrawl\n4. Open FD");
 						mOperationChoice = mObject.buff.readLine();
 						switch(Integer.parseInt(mOperationChoice)) {
-						case 1: mObject.mICICI.openAccount(mObject.buff);
+						case 1: mObject.mICICI.openAccount(mObject.buff, mCustomer);
 								break;
-						case 2: mObject.mICICI.deposit(mObject.buff);
+						case 2: mObject.mICICI.deposit(mObject.buff, mCustomer);
 								break;
-						case 3: mObject.mICICI.withdrawl(mObject.buff);
+						case 3: mObject.mICICI.withdrawl(mObject.buff, mCustomer);
 								break;
-						case 4: mObject.mICICI.openFD(mObject.buff);
+						case 4: mObject.mICICI.openFD(mObject.buff, mCustomer);
 								break;
 						default: System.out.println("No Operation Choice Selected");
 						}
@@ -83,13 +83,13 @@ public class CustomerBanking {
 						System.out.println("SELECT  YOUR  Operation\n1. Open Account\n2. Deposit\n3. WithDrawl\n4. Open FD");
 						mOperationChoice = mObject.buff.readLine();
 						switch(Integer.parseInt(mOperationChoice)) {
-						case 1: mObject.mHDFC.openAccount(mObject.buff);
+						case 1: mObject.mHDFC.openAccount(mObject.buff, mCustomer);
 								break;
-						case 2: mObject.mHDFC.deposit(mObject.buff);
+						case 2: mObject.mHDFC.deposit(mObject.buff, mCustomer);
 								break;
-						case 3: mObject.mHDFC.withdrawl(mObject.buff);
+						case 3: mObject.mHDFC.withdrawl(mObject.buff, mCustomer);
 								break;
-						case 4:  mObject.mHDFC.openFD(mObject.buff);
+						case 4:  mObject.mHDFC.openFD(mObject.buff, mCustomer);
 								break;
 						default: System.out.println("No Operation Choice Selected");
 						}
@@ -109,13 +109,13 @@ public class CustomerBanking {
 						System.out.println("SELECT  YOUR  Operation\n1. Open Account\n2. Deposit\n3. WithDrawl\n4. Open FD");
 						mOperationChoice = mObject.buff.readLine();
 						switch(Integer.parseInt(mOperationChoice)) {
-						case 1: mObject.mAxis.openAccount(mObject.buff);
+						case 1: mObject.mAxis.openAccount(mObject.buff, mCustomer);
 								break;
-						case 2: mObject.mAxis.deposit(mObject.buff);
+						case 2: mObject.mAxis.deposit(mObject.buff, mCustomer);
 								break;
-						case 3: mObject.mAxis.withdrawl(mObject.buff);
+						case 3: mObject.mAxis.withdrawl(mObject.buff, mCustomer);
 								break;
-						case 4:  mObject.mAxis.openFD(mObject.buff);
+						case 4:  mObject.mAxis.openFD(mObject.buff, mCustomer);
 								break;
 						default: System.out.println("No Operation Choice Selected");
 						}
@@ -138,7 +138,9 @@ public class CustomerBanking {
 		}while(mObject.bankOpen);
 		System.out.println("Total No of customers are "+mObject.mCustomerList.size());
 		for(Customer customer: mObject.mCustomerList) 
-			System.out.println("This customer performed "+customer.getOperationCounter()+" operations");
+			System.out.println("Customer Details are\nName: "+customer.getName()
+			+"\nEmail: "+customer.getEmail()+"\nPhone: "+customer.getPhone()+"\nBalance: "+
+					customer.getBalance()+"\nNo Of Operations Performed: "+customer.getOperationCounter());
 		
 		
 	}	
