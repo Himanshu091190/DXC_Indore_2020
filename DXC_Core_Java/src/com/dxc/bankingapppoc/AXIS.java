@@ -43,8 +43,6 @@ public class AXIS implements RBI{
 			customer.setBalance(String.valueOf(BAL));
 			int mDepositCounter = customer.getDepositCounter()+1;
 			customer.setDepositCounter(mDepositCounter);
-			int mWithdrawlCounter = customer.getWithdrawlCounter()+1;
-			customer.setWithdrawlCounter(mWithdrawlCounter);
 			System.out.println("Balance is "+BAL);
 		}
 		catch(Exception e) {
@@ -62,6 +60,8 @@ public class AXIS implements RBI{
 			else
 				System.out.println("MIN BAL is not maintained after withdrawl !!");
 			customer.setBalance(String.valueOf(BAL));
+			int mWithdrawlCounter = customer.getWithdrawlCounter()+1;
+			customer.setWithdrawlCounter(mWithdrawlCounter);
 			System.out.println("Balance is "+BAL);
 		}
 		catch(Exception e) {

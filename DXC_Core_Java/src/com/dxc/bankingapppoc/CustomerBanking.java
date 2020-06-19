@@ -161,14 +161,14 @@ public class CustomerBanking {
 			mObject.mCustomerList.add(mCustomer);
 		} while (mObject.bankOpen);
 		System.out.println("Total No of customers are " + mObject.mCustomerList.size());
+		System.out.println("=====================  Below are the Customers  ==============================\n\n\n");
 		for (Customer customer : mObject.mCustomerList) {
-			System.out.println("Customer Details are:\n\nCustomer Bank: +" + customer.getBankType() + "\nName: "
+			System.out.println("Customer Details are:\nCustomer Bank: " + customer.getBankType() + "\nName: "
 					+ customer.getName() + "\nEmail: " + customer.getEmail() + "\nPhone: " + customer.getPhone()
 					+ "\nBalance: " + customer.getBalance() + "\nNo Of Operations Performed: "
 					+ customer.getOperationCounter() + "\n1. OpenAccountCounter: " + customer.getOpenAccountCounter()
 					+ "\n2. Deposit Counter: " + customer.getDepositCounter() + "\n3. Withdrawl Counter: "
-					+ customer.getWithdrawlCounter() + "\n4. OpenFD Counter: " + customer.getOpenFDCounter());
-			System.out.println("\n\n================ Next Customer ============================");
+					+ customer.getWithdrawlCounter() + "\n4. OpenFD Counter: " + customer.getOpenFDCounter()+"\n\n");
 		}
 	}
 }
