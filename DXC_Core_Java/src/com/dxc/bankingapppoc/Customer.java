@@ -2,8 +2,8 @@ package com.dxc.bankingapppoc;
 
 public class Customer {
 	
-	int operationCounter;
-	String name,email,phone,balance;
+	int operationCounter, OpenAccountCounter, DepositCounter, WithdrawlCounter, OpenFDCounter;
+	String name,email,phone,balance, bankType;
 
 	public String getName() {
 		return name;
@@ -43,5 +43,45 @@ public class Customer {
 
 	public void setOperationCounter(int operationCounter) {
 		this.operationCounter = operationCounter;
+	}
+
+	public int getOpenAccountCounter() {
+		return OpenAccountCounter;
+	}
+
+	public void setOpenAccountCounter(int openAccountCounter) {
+		OpenAccountCounter = openAccountCounter;
+	}
+
+	public int getDepositCounter() {
+		return DepositCounter;
+	}
+
+	public void setDepositCounter(int depositCounter) {
+		DepositCounter = depositCounter;
+	}
+
+	public int getWithdrawlCounter() {
+		return WithdrawlCounter;
+	}
+
+	public void setWithdrawlCounter(int withdrawlCounter) {
+		WithdrawlCounter = withdrawlCounter;
+	}
+
+	public int getOpenFDCounter() {
+		return OpenFDCounter;
+	}
+
+	public void setOpenFDCounter(int openFDCounter) {
+		OpenFDCounter = openFDCounter;
+	}
+
+	public String getBankType() {
+		return bankType;
+	}
+
+	public void setBankType(String bankType) {
+		this.bankType = bankType;
 	}
 }
