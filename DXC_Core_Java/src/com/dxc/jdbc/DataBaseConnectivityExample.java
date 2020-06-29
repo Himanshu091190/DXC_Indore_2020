@@ -1,7 +1,10 @@
 package com.dxc.jdbc;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 //Establish the Connection with DataBase
 //1. Create Connection
@@ -40,9 +43,14 @@ public class DataBaseConnectivityExample {
 		
 		
 		/**********************  Updating Existing Row in DataBase  ***************************/
-		/*PreparedStatement stmtUpdate = con.prepareStatement("update contact set name=? where contact_id=?");
-		stmtUpdate.setString(1, "Viru Sehwag"); // 1 specifies the first parameter in the query i.e name
-		stmtUpdate.setInt(2, 3); // 2 specifies the second parameter in the query i.e contact_id
+		/*BufferedReader mBufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter the name which you want to update");
+		String name = mBufferedReader.readLine();
+		System.out.println("Enter the id for which you want to update");
+		int id = Integer.parseInt(mBufferedReader.readLine());
+		PreparedStatement stmtUpdate = con.prepareStatement("update contact set name=? where contact_id=?");
+		stmtUpdate.setString(1, name); // 1 specifies the first parameter in the query i.e name
+		stmtUpdate.setInt(2, id); // 2 specifies the second parameter in the query i.e contact_id
 		
 		System.out.println(stmtUpdate.executeUpdate() + " No of Records Updated");*/
 
