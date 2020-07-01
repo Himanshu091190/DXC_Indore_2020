@@ -53,15 +53,18 @@ public class JsonDBExample {
 		}
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dxcemployeedb", "root", "root");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/contactdb", "root", "root");
 
 		for(int i=0; i<mList.size(); i++) {
 			DXCEmployee mObject = mList.get(i);
 			/**********************  Inserting Into DataBase  ***************************/
 			PreparedStatement stmtInsert = con.prepareStatement("insert into dxcemployee values(?,?)");
 			stmtInsert.setString(1, mObject.getEmpId());
-			stmtInsert.setString(2, mObject.getEmpName());	
+			stmtInsert.setString(2, mObject.getEmpName());
+			stmtInsert.executeUpdate();
+			stmtInsert.close();
 		}
+		System.out.println("Inserted Data Successfully");
 		
 	}
 
