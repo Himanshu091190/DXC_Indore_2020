@@ -19,6 +19,7 @@ click here for <a href="login.jsp">Login</a><br><br>
 click here for <a href="contact.jsp">Contact</a><br><br>
 click here for <a href="signup.jsp">Signup</a><br><br>
 click here for <a href="error.jsp">Error</a><br><br>
+click here for <a href="usersignup.jsp">User Module</a><br><br>
 
 <!-- A scriptlet Tag is used to execute java source code in JSP -->
 <% out.println("First JSP Scriptlet Tag element"); %><br><br>
