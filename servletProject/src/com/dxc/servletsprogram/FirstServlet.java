@@ -19,6 +19,9 @@ public class FirstServlet extends HttpServlet {
 		pw.println("<html><body>");
 		pw.println("Welcome to Servlets");
 		pw.println("</body></html>");
+		
+		
+		response.sendRedirect("https://www.google.com/");
 		pw.close();
 	}
 
