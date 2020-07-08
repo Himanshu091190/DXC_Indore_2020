@@ -7,17 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-Assignment1<a href="assignment1.jsp"></a>
-Assignment2<a href="assignment2.html"></a>
-Assignment3<a href="assignment3.jsp"></a>
-Assignment4<a href="assignment4.jsp"></a>
-Assignment5<a href="assignment5.jsp"></a>
-Assignment6<a href="assignment6.html"></a>
-Assignment7<a href="assignment7.html"></a>
-Assignment8<a href="assignment8.jsp"></a>
-Assignment9<a href="assignment9.jsp"></a>
-Assignment10<a href="assignment10.html"></a>
-Assignment11<a href="assignment11.jsp"></a>
-Assignment12<a href="assignment12.html"></a>
+<a href="assignment1.jsp">Assignment1</a><br>
+<a href="assignment2.html">Assignment2</a><br>
+<a href="assignment3.jsp">Assignment3</a><br>
+<a href="assignment4.jsp">Assignment4</a><br>
+<a href="assignment5.jsp">Assignment5</a><br>
+<a href="assignment6.html">Assignment6</a><br>
+<a href="assignment7.html">Assignment7</a><br>
+<a href="assignment8.jsp">Assignment8</a><br>
+<a href="assignment9.jsp">Assignment9</a><br>
+<a href="assignment10.html">Assignment10</a><br>
+<a href="assignment11.jsp">Assignment11</a><br>
+<a href="assignment12.html">Assignment12</a><br>
 </body>
 </html>
