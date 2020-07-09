@@ -1,6 +1,7 @@
 package com.dxc.jdbc;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,24 @@ public class ViewEmployees extends HttpServlet {
 		try {
 			mList = EmployeeDAO.getAllEmployees();
 			// Do the parsing of List
+			
+			PrintWriter pw = response.getWriter();
+			
+			pw.print("<html><body><table><tr>");
+			pw.print("<th>ID</th><th>Name</th><th>Email</th><th>Password</th><th>Country</th>");
+			
+			for(Employee mEmployee: mList) {
+				pw.print("<tr>");
+				pw.print("<td>"+mEmployee.getId()+"</td>");
+				pw.print("<td>"+mEmployee.getName()+"</td>");
+				pw.print("<td>"+mEmployee.getEmail()+"</td>");
+				pw.print("<td>"+mEmployee.getPassword()+"</td>");
+				pw.print("<td>"+mEmployee.getCountry()+"</td>");
+				pw.print("</tr>");
+			}
+			
+			pw.print("</tr></table></body></html>");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
