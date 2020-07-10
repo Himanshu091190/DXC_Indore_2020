@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.dxc.jpa.employee.Employee;
+//import com.dxc.jpa.employee.Employee;
 
 public class PersistEmployee {
 
@@ -59,9 +59,9 @@ public class PersistEmployee {
 		
 		
 		// Delete entry in DB
-		Employee mDeleteEmployee = em.find(Employee.class, 102);
-		em.remove(mDeleteEmployee);
-		em.getTransaction().commit();
+//		Employee mDeleteEmployee = em.find(Employee.class, 102);
+//		em.remove(mDeleteEmployee);
+//		em.getTransaction().commit();
 		
 		em.close();
 		emf.close();
