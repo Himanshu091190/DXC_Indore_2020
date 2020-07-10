@@ -5,15 +5,9 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 
 	<!-- Container of Configurations -->
-	<persistence-unit name="mappings">
-	<class>com.dxc.mappings.ManyToManyStudent</class>
-	<class>com.dxc.mappings.ManyToManyLibrary</class>
-	<class>com.dxc.mappings.ManyToOneStudent</class>
-	<class>com.dxc.mappings.ManyToOneLibrary</class>
-	<class>com.dxc.mappings.OneToManyStudent</class>
-	<class>com.dxc.mappings.OneToManyLibrary</class>
-	<class>com.dxc.mappings.Student</class>
-	<class>com.dxc.mappings.Library</class>
+	<persistence-unit name="collection_types">
+	<class>com.dxc.jpa.employee.DxcEmployee</class>
+	<class>com.dxc.jpa.employee.Address</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url"	value="jdbc:mysql://localhost:3306/studentdata" />
