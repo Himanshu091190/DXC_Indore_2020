@@ -4,6 +4,7 @@ public class Employee {
 
 	int id;
 	String name, email;
+	Address address;
 
 	public int getId() {
 		return id;
@@ -27,6 +28,14 @@ public class Employee {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 }

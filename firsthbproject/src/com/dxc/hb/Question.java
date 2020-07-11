@@ -8,9 +8,10 @@ public class Question {
 
 	int id;
 	String questionName;
-	List<String> answers;
-	Set<String> mSetAnswers;
-	Map<String,String> mMapAnswers;
+	List<Answer> answers;
+//	List<String> answers;
+//	Set<String> mSetAnswers;
+//	Map<String,String> mMapAnswers;
 
 	public int getId() {
 		return id;
@@ -28,7 +29,15 @@ public class Question {
 		this.questionName = questionName;
 	}
 
-	public List<String> getAnswers() {
+	public List<Answer> getAnswers() {
+		return answers;
+	}
+
+	public void setAnswers(List<Answer> answers) {
+		this.answers = answers;
+	}
+
+	/*public List<String> getAnswers() {
 		return answers;
 	}
 
@@ -50,5 +59,7 @@ public class Question {
 
 	public void setmMapAnswers(Map<String, String> mMapAnswers) {
 		this.mMapAnswers = mMapAnswers;
-	}
+	}*/
+	
+	
 }

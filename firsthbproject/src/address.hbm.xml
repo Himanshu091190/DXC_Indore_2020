@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">
+
+<hibernate-mapping>
+	<class name="com.dxc.hb.Address" table="address">
+		<id name="addressid">
+			<!-- <generator class="foreign"> <param name="property">employee</param> 
+				</generator> -->
+			<generator vlass="increment"></generator>
+		</id>
+
+		<property name="addressLine1"></property>
+		<property name="city"></property>
+		<property name="state"></property>
+		<property name="country"></property>
+
+		<!-- <one-to-one name="employee"></one-to-one> -->
+
+	</class>
+
+</hibernate-mapping>

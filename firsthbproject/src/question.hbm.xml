@@ -11,17 +11,28 @@
 
 		<property name="questionName"></property>
 
-		<!-- <list name="answers" table="answers"> <key column="qid"></key> <index 
-			column="type"></index> <element column="answer" type="string"></element> 
-			</list> -->
-
-		<!-- <set name="mSetAnswers" table="answers"> <key column="qid"></key> 
-			<element column="answer" type="string"></element> </set> -->
-		<map name="mMapAnswers" table="answers" cascade="all">
+		<list name="answers" cascade="all">
 			<key column="qid"></key>
-			<index column="answer" type="string"></index>
-			<element column="email" type="string"></element>
-		</map>
+			<index column="type"></index>
+			<one-to-many class="com.dxc.hb.Answer"></one-to-many>
+		</list>
 	</class>
+
+	<class name="com.dxc.hb.Answer" table="answer">
+	    <id name="id">
+			<generator class="increment"></generator>
+		</id>
+	    <property name="answername"></property>
+	    <property name="postedBy"></property>
+	<!-- <list name="answers" table="answers"> <key column="qid"></key> <index 
+		column="type"></index> <element column="answer" type="string"></element> 
+		</list> -->
+
+	<!-- <set name="mSetAnswers" table="answers"> <key column="qid"></key> <element 
+		column="answer" type="string"></element> </set> -->
+	<!-- <map name="mMapAnswers" table="answers" cascade="all"> <key column="qid"></key> 
+		<index column="answer" type="string"></index> <element column="email" type="string"></element> 
+		</map> -->
+</class>
 
 </hibernate-mapping>

@@ -12,13 +12,17 @@
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 
 		<!-- Assume test is the database name -->
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hbdatabase</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hbmapping</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
 
 		<!-- List of XML mapping files -->
-		<!--  <mapping resource="employee.hbm.xml" /> -->
-		<mapping resource="question.hbm.xml" />
+		 <!--  <mapping resource="employee.hbm.xml" />
+		 <mapping resource="address.hbm.xml" />  -->
+		<!--  <mapping resource="question.hbm.xml" /> -->
+		
+		<mapping resource="questionmanytomany.hbm.xml" />
+		<mapping resource="answermanytomany.hbm.xml" />
 
 	</session-factory>
 
