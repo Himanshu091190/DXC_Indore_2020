@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">
+
+<hibernate-mapping>
+	<class name="com.dxc.hb.Question" table="question">
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+
+		<property name="questionName"></property>
+
+		<!-- <list name="answers" table="answers"> <key column="qid"></key> <index 
+			column="type"></index> <element column="answer" type="string"></element> 
+			</list> -->
+
+		<!-- <set name="mSetAnswers" table="answers"> <key column="qid"></key> 
+			<element column="answer" type="string"></element> </set> -->
+		<map name="mMapAnswers" table="answers" cascade="all">
+			<key column="qid"></key>
+			<index column="answer" type="string"></index>
+			<element column="email" type="string"></element>
+		</map>
+	</class>
+
+</hibernate-mapping>
