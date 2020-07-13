@@ -4,17 +4,47 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="a1" class="com.dxc.springcore.Address">
-	    <constructor-arg value="Noida"></constructor-arg>
-	    <constructor-arg value="UP"></constructor-arg>
-	    <constructor-arg value="India"></constructor-arg>
-	</bean>    
-    
-    <bean id="e" class="com.dxc.springcore.Employee">
-        <constructor-arg value="10" type="int"></constructor-arg>
-        <constructor-arg value="Himanshu Sharma"></constructor-arg>
-        <constructor-arg>
-            <ref bean="a1"></ref>
-        </constructor-arg>
-    </bean>
+		<!-- <constructor-arg value="Noida"></constructor-arg> <constructor-arg 
+			value="UP"></constructor-arg> <constructor-arg value="India"></constructor-arg> -->
+		<property name="city" value="Noida"></property>
+		<property name="state" value="Uttar Pradesh"></property>
+		<property name="country" value="India"></property>
+	</bean>
+
+	<bean id="e" class="com.dxc.springcore.Employee">
+		<!-- <constructor-arg value="10" type="int"></constructor-arg> <constructor-arg 
+			value="Himanshu Sharma"></constructor-arg> <constructor-arg> <ref bean="a1"></ref> 
+			</constructor-arg> -->
+		<property name="id" value="1"></property>
+		<property name="name" value="Himanshu Sharma"></property>
+		<property name="address" ref="a1"></property>
+	</bean>
+
+	<bean id="q" class="com.dxc.springcore.collectionsci.Question">
+		<constructor-arg value="111" type="int"></constructor-arg>
+		<constructor-arg value="Himanshu Sharma"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Java is OOPS</value>
+				<value>PM is Narendra Modi</value>
+				<value>Country is INDIA</value>
+				<value>Corona is spread from CHINA</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="q1" class="com.dxc.springcore.collectionsci.Question">
+		<constructor-arg value="111" type="int"></constructor-arg>
+		<constructor-arg value="Who is Himanshu Sharma ?"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="Software Developer" value="John Cena"></entry>
+				<entry key="Software Consultant" value="Stone Cold"></entry>
+				<entry key="Automation Tester" value="Brock Lesnar"></entry>
+				<entry key="Software Architect" value="Kane"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
 
 </beans>
