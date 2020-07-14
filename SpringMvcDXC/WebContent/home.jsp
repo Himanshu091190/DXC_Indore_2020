@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-My First Spring MVC Application
+Home Page
 </body>
 </html>
