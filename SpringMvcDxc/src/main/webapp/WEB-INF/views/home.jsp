@@ -10,7 +10,7 @@
     </head>
     <body>
         <div align="center">
-            <h1>Contact List</h1>
+            <h1>Employee List</h1>
             <h3><a href="/SpringMvcDxc/newEmployee">New Employee</a></h3>
             <table border="1">
                 <th>No</th>
@@ -21,7 +21,8 @@
                  
                 <c:forEach var="employee" items="${listEmployee}" varStatus="status">
                 <tr>
-                    <td>${status.index + 1}</td>
+                    <!--  <td>${status.index + 1}</td>-->
+                    <td>${employee.id}</td>
                     <td>${employee.name}</td>
                     <td>${employee.salary}</td>
                     <td>${employee.designation}</td>
