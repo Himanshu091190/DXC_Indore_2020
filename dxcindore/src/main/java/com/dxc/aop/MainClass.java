@@ -13,11 +13,29 @@ public class MainClass {
 //		System.out.println("Invoking showName()");
 //		actions.showName();
 		
-		System.out.println("Invoking showSalary()");
-		actions.getSalary();
+//		System.out.println("Invoking showSalary()");
+//		actions.getSalary();
 		
-		System.out.println("Invoking showAge()");
-		actions.getAge();
+//		System.out.println("Invoking showAge()");
+//		actions.getAge();
+		
+//		try {
+//			actions.getResult(45);
+//		}
+//		catch(Exception e) {
+//			System.out.println("Exception is "+e);
+//		}
+		
+		
+//		try {
+//			actions.getResult(10);
+//		}
+//		catch(Exception e) {
+//			System.out.println("Exception is "+e);
+//		}
+		
+		actions.showName();
+		actions.showEmail();
 		
 	}
 
