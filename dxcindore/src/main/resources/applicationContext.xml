@@ -6,6 +6,9 @@
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 
 
+    <bean id="customerBean" class="com.dxc.aop.Customer">
+        <constructor-arg value="1000" type="int"></constructor-arg>
+    </bean>
 	<bean id="actionBean" class="com.dxc.aop.Actions"></bean>
 	<bean id="adviceActionBean" class="com.dxc.aop.TrackAdviceAction"></bean>
 	<bean
