@@ -40,7 +40,7 @@ public class MainClass {
 //		actions.showName();
 //		actions.showEmail();
 		
-		Customer mCustomer = new Customer();
+		Customer mCustomer = (Customer) context.getBean("customerBean");
 		BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Welcome to IBS! Select Your Choice\n\n");
 		System.out.println("1. Open Account\n2. Deposit\n3. Withdrawl\n4. Check Balance\n\n");
