@@ -1,0 +1,50 @@
+package com.dxc.jmsproducer;
+
+import javax.jms.Connection;
+import javax.jms.DeliveryMode;
+import javax.jms.Destination;
+import javax.jms.MessageProducer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+
+import org.apache.activemq.ActiveMQConnectionFactory;
+
+public class Producer implements Runnable{
+
+	@Override
+	public void run() {
+		try {
+			// Creating a Connection Factory
+			ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory("tcp://127.0.0.1:61616");
+			
+			// Creating a Connection to Factory
+			Connection connection = factory.createConnection();
+			
+			// Starting the Connection
+			connection.start();
+			
+			// Creating a Session which is non Transactional
+			Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+			
+			// Creating a Destination Queue
+			Destination queue = session.createQueue("Queue");
+			
+			// Creating a Producer
+			MessageProducer producer = session.createProducer(queue);
+			producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+			String message = "Welcome to JMS First Example Guys";
+			
+			// Inserting a Message
+			TextMessage msg = session.createTextMessage(message);
+			System.out.println("Producer Sent: "+message);
+			producer.send(msg);
+			
+			session.close();
+			connection.close();
+		}
+		catch(Exception e) {
+			System.out.println("Exception is "+e);
+		}
+	}
+
+}
